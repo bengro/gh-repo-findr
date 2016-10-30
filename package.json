@@ -1,0 +1,11 @@
+{
+  "name": "gh-repo-findr",
+  "version": "0.0.0",
+  "description": "",
+  "main": "manifest.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Benjamin Groehbiel <benjamin.groehbiel@gmail.com>",
+  "license": "ISC"
+}

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github Repository Search",
+  "description": "Jump to any repository you have access to on GitHub.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_popup": "src/popup.html"
+  },
+  "permissions": [
+    "https://*.github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.github.com/*"],
+      "js": ["src/page_findr.js"]
+    }
+  ]
+}
+

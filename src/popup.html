@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body id="popup">
+    <h1>GitHub Repository Search</h1>
+
+    <div id="setup">
+      <form action="GET" name="settings">
+        <input type="text" name="github-access-token"/>
+        <input type="submit" name="submit-button" value="Enable">
+      </form>
+    </div>
+
+    <div id="success">
+      <p>Github token set</p>
+    </div>
+  </body>
+</html>
+
