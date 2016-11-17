@@ -7,6 +7,7 @@ const gulp = require('gulp'),
   clean = require('gulp-clean'),
   runSequence = require('run-sequence'),
   inject = require('gulp-inject'),
+  karmaServer = require('karma').Server,
   TMP_UNPACKED_PATH = 'tmp/unpacked-extension';
 
 gulp.task('bundle-extension', function (done) {
@@ -63,4 +64,13 @@ gulp.task('inject-js', function () {
 
 gulp.task('dev', function () {
   return gulp.watch('src/*.{js,html}', ['bundle-extension'])
+});
+
+gulp.task('test', function (done) {
+  new karmaServer({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, function () {
+    done();
+  }).start();
 });
