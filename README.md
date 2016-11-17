@@ -1,6 +1,10 @@
-# TODOs
+## Development
+To build the unpacked extension, run:
+```
+gulp bundle-extension
+```
 
-Build pipeline:
-* Use https://yarnpkg.com/
-* Use Babel / ES6
+## TODOs
+* ✓ Use https://yarnpkg.com/
+* ✓ Use Babel / ES6
 * Build pipeline with gulp
