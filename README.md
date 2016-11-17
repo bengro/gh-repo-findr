@@ -1,14 +1,21 @@
+# Jump to accessible repos
+a chrome extension
+
 ## Development
 To build the unpacked extension, run:
 ```
-gulp bundle-extension
+gulp dist
 ```
 
 To run tests, run:
 ```
-gulp bundle-extension
+gulp test
 ```
 
+To bundle extension, run:
+```
+gulp bundle-extension
+```
 
 ## TODOs
 * ✓ Use https://yarnpkg.com/

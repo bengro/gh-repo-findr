@@ -8,6 +8,8 @@ const gulp = require('gulp'),
   runSequence = require('run-sequence'),
   inject = require('gulp-inject'),
   karmaServer = require('karma').Server,
+  crx = require('gulp-crx-pack'),
+  fs = require('fs'),
   TMP_UNPACKED_PATH = 'tmp/unpacked-extension';
 
 gulp.task('bundle-extension', function (done) {
@@ -73,4 +75,13 @@ gulp.task('test', function (done) {
   }, function () {
     done();
   }).start();
+});
+
+gulp.task('dist', function () {
+  return gulp.src(TMP_UNPACKED_PATH)
+    .pipe(crx({
+      privateKey: fs.readFileSync('tmp/extension_key.pem', 'utf8'),
+      filename: 'gh-repo-findr.crx'
+    }))
+    .pipe(gulp.dest('./tmp/dist'));
 });
