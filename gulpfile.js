@@ -60,3 +60,7 @@ gulp.task('inject-js', function () {
   return target.pipe(inject(sources, {ignorePath: `/${TMP_UNPACKED_PATH}/`}))
     .pipe(gulp.dest(TMP_UNPACKED_PATH));
 });
+
+gulp.task('dev', function () {
+  return gulp.watch('src/*.{js,html}', ['bundle-extension'])
+});
