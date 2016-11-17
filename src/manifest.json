@@ -11,6 +11,12 @@
   },
   "permissions": [
     "https://*.github.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://*.github.com/*"],
+      "js": ["content-script.js"]
+    }
   ]
 }
 

@@ -6,4 +6,4 @@ document.addEventListener('DOMContentLoaded', function() {
   console.log('page fully loaded')
 });
 
-console.log('something....')
+console.log('something....');
