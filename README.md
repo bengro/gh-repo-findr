@@ -1,10 +1,21 @@
-# Jump to accessible repos
-a chrome extension
+# Github repository finder
+a chrome extension, short gh-repo-findr.
+
+## Installation
+```
+brew install yarn
+yarn install
+```
+
+The Gulp binary will be installed `node_modules/.bin/`. To access gulp from the path:
+```
+PATH=$PATH:/path/to/gh-repo-findr/node_modules/.bin/
+```
 
 ## Development
-To build the unpacked extension, run:
+To bundle extension, run:
 ```
-gulp dist
+gulp bundle-extension
 ```
 
 To run tests, run:
@@ -12,12 +23,18 @@ To run tests, run:
 gulp test
 ```
 
-To bundle extension, run:
+## Distribution
+
+To build the unpacked extension, run:
 ```
-gulp bundle-extension
+gulp dist
 ```
+
+In order to create a signed chrome extension, you must provide a certificate.
+Place the key in `tmp/extension_key.pem`.
 
 ## TODOs
 * ✓ Use https://yarnpkg.com/
 * ✓ Use Babel / ES6
 * Build pipeline with gulp
+* Implement content-script
