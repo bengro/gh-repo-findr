@@ -10,7 +10,8 @@ const gulp = require('gulp'),
   karmaServer = require('karma').Server,
   crx = require('gulp-crx-pack'),
   fs = require('fs'),
-  TMP_UNPACKED_PATH = 'tmp/unpacked-extension';
+  TMP_UNPACKED_PATH = 'tmp/unpacked-extension',
+  mocha = require('gulp-mocha');
 
 gulp.task('bundle-extension', function (done) {
   runSequence('clean',
@@ -75,6 +76,13 @@ gulp.task('test', function (done) {
   }, function () {
     done();
   }).start();
+});
+
+gulp.task('e2e', ['dist'], function () {
+  return gulp.src(['src/*e2e.js'], { read: false })
+    .pipe(mocha({
+      reporter: 'spec'
+    }));
 });
 
 gulp.task('dist', function () {

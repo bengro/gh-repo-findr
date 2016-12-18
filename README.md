@@ -25,6 +25,12 @@ To run tests, run:
 gulp test
 ```
 
+To run end-to-end tests, run:
+```
+./node_modules/.bin/selenium-standalone start
+gulp e2e
+```
+
 ## Distribution
 
 To build the unpacked extension, run:
