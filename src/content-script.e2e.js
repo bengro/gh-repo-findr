@@ -1,6 +1,7 @@
 const webdriver = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
-const CHROME_CRX_PATH = '/Users/pivotal/workspace/gh-repo-findr/tmp/dist/gh-repo-findr.crx';
+const path = require('path');
+const CHROME_CRX_PATH = path.join(__dirname, '../tmp/dist/gh-repo-findr.crx');
 
 describe('on github pages', () => {
   let driver;
