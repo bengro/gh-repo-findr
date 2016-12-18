@@ -2,6 +2,8 @@
 a chrome extension, short gh-repo-findr.
 
 ## Installation
+It is assumed, that Java is installed.
+
 ```
 brew install yarn
 yarn install
