@@ -6,7 +6,11 @@ const CHROME_CRX_PATH = path.join(__dirname, '../tmp/dist/gh-repo-findr.crx');
 describe('on github pages', () => {
   let driver;
 
-  before((done) => {
+  before(() => {
+    let path = require('chromedriver').path;
+    let service = new chrome.ServiceBuilder(path).build();
+    chrome.setDefaultService(service);
+
     let options = new chrome.Options();
     options.addExtensions(CHROME_CRX_PATH);
 
@@ -14,8 +18,6 @@ describe('on github pages', () => {
       .forBrowser('chrome')
       .setChromeOptions(options)
       .build();
-
-    // done()
   });
 
   after(() => {
