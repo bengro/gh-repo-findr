@@ -81,7 +81,8 @@ gulp.task('test', function (done) {
 gulp.task('e2e', ['dist'], function () {
   return gulp.src(['src/*e2e.js'], { read: false })
     .pipe(mocha({
-      reporter: 'spec'
+      reporter: 'spec',
+      timeout: 5000
     }));
 });
 
