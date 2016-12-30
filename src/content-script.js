@@ -1,6 +1,3 @@
-/**
- * Content Script for gh-repo-findr
- **/
 class ContentScript {
 
   constructor(document) {
