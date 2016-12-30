@@ -69,7 +69,7 @@ gulp.task('dev', function () {
   return gulp.watch('src/*.{js,html}', ['bundle-extension'])
 });
 
-gulp.task('test', function (done) {
+gulp.task('test', ['bundle-extension'], function (done) {
   new karmaServer({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true
