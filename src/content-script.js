@@ -1,9 +1,10 @@
 /**
  * Content Script for gh-repo-findr
  **/
+class ContentScript {
 
-document.addEventListener('DOMContentLoaded', function() {
-  console.log('page fully loaded')
-});
+  constructor(document) {
+    console.log("yo, we're in business")
+  }
 
-console.log('something....');
+}

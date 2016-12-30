@@ -18,7 +18,9 @@
   },
   "dependencies": {
     "babel-preset-es2015-rollup": "^1.2.0",
+    "browserify": "^13.1.1",
     "chai": "^3.5.0",
+    "chai-dom": "^1.4.3",
     "chromedriver": "^2.26.0",
     "gulp": "^3.9.1",
     "gulp-clean": "^0.3.2",
@@ -26,13 +28,16 @@
     "gulp-inject": "^4.1.0",
     "gulp-mocha": "^3.0.1",
     "karma": "^1.3.0",
+    "karma-browserify": "^5.1.0",
+    "karma-chai": "^0.1.0",
     "karma-chrome-launcher": "^2.0.0",
-    "karma-jasmine": "^1.0.2",
+    "karma-mocha": "^1.3.0",
     "mocha": "^3.2.0",
     "rollup-plugin-babel": "^2.6.1",
     "rollup-stream": "^1.14.0",
     "run-sequence": "^1.2.2",
     "selenium-webdriver": "^3.0.1",
-    "vinyl-source-stream": "^1.1.0"
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.8.0"
   }
 }
